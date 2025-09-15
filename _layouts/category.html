@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<div class="category-page">
+    <h1>{{ page.category | capitalize }}</h1>
+
+    <div class="post-list">
+        {% for post in site.posts %} {% if post.categories contains page.category %}
+        <article class="post-preview">
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+        </article>
+        {% endif %} {% endfor %}
+    </div>
+</div>
+
+<style>
+    :root {
+        --color-forest: #2c4a3e;
+        --color-earth: #5e4238;
+        --color-moss: #4a5d4c;
+        --font-main: "Adobe Garamond Pro", "EB Garamond", "Garamond", Georgia, serif;
+    }
+
+    .category-page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em 1em;
+    }
+
+    .category-page h1 {
+        color: var(--color-forest);
+        font-family: var(--font-main);
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+
+    .post-preview {
+        margin-bottom: 2em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid var(--color-moss);
+        background: white;
+        padding: 1.5em;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .post-preview h2 a {
+        color: var(--color-forest);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .post-preview h2 a:hover {
+        color: var(--color-earth);
+    }
+
+    .post-meta {
+        color: var(--color-moss);
+        font-size: 0.9em;
+        font-style: italic;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        background: var(--color-forest);
+        color: white;
+        text-decoration: none;
+        border-radius: 2px;
+        transition: background-color 0.3s;
+    }
+
+    .read-more:hover {
+        background: var(--color-moss);
+    }
+</style>

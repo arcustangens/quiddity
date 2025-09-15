@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      @font-face {
+        font-family: 'EB Garamond';
+        src: url('/assets/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype-variations');
+        font-weight: 400 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'EB Garamond';
+        src: url('/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype-variations');
+        font-weight: 400 800;
+        font-style: italic;
+      }
+    </style>
+    {% seo %}
+    <style>
+      :root {
+        --color-forest: #2c4a3e;
+        --color-earth: #5e4238;
+        --color-moss: #4a5d4c;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-moss) 100%);
+        min-height: 100vh;
+      }
+
+      #main_content_wrap {
+        background: #f4f1eb;
+        margin: 0;
+        padding: 40px 0;
+        min-height: calc(100vh - 80px);
+      }
+
+      #main_content {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        font-family: 'EB Garamond', Georgia, serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      @font-face {
+        font-family: 'EB Garamond';
+        src: url('/assets/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+        font-weight: 400 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'EB Garamond';
+        src: url('/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+        font-weight: 400 800;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_content_wrap">
+      <div id="main_content">
+        {{ content }}
+      </div>
+    </div>
+  </body>
+</html>
