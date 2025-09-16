@@ -12,6 +12,10 @@ layout: default
     {% endif %}
 
     <div class="post-content">{{ content }}</div>
+
+    <div class="post-navigation">
+        <a href="{{ site.baseurl }}/" class="back-link">←&nbsp;Back</a>
+    </div>
 </article>
 
 <style>
@@ -45,6 +49,27 @@ layout: default
         font-style: italic;
         text-align: center;
         margin-bottom: 3em;
+    }
+
+    .post-navigation {
+        text-align: center;
+        margin-top: 4em;
+    }
+
+    .back-link {
+        display: inline-block;
+        padding: 0.8em 1.5em;
+        color: var(--color-forest);
+        text-decoration: none;
+        border: 1px solid var(--color-forest);
+        border-radius: 2px;
+        font-style: italic;
+        transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+        background: var(--color-forest);
+        color: white;
     }
 
     .post-content {

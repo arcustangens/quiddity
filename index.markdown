@@ -6,19 +6,20 @@ title: Quiddity
 <div class="post-list">
 {% for post in site.posts limit:5 %}
   <article class="post-preview">
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    {% if post.date %}
-    <p class="post-meta">
-        {% assign date_format = post.date_format | default: "%B %d, %Y" %}
-        {% if post.date_format == "month_year" %}
-            {{ post.date | date: "%B %Y" }}
-        {% else %}
-            {{ post.date | date: date_format }}
-        {% endif %}
-    </p>
-    {% endif %}
-    <p>{{ post.excerpt }}</p>
-    <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      <h2>{{ post.title }}</h2>
+      {% if post.date %}
+      <p class="post-meta">
+          {% assign date_format = post.date_format | default: "%B %d, %Y" %}
+          {% if post.date_format == "month_year" %}
+              {{ post.date | date: "%B %Y" }}
+          {% else %}
+              {{ post.date | date: date_format }}
+          {% endif %}
+      </p>
+      {% endif %}
+      <p class="post-excerpt">{{ post.excerpt }}</p>
+    </a>
   </article>
 {% endfor %}
 </div>
@@ -77,13 +78,20 @@ h1, h2 {
     opacity: 0.4;
 }
 
-.post-preview h2 a {
-    color: var(--color-forest);
+.post-link {
+    display: block;
     text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.post-preview h2 {
+    color: var(--color-forest);
+    margin-top: 0;
     transition: color 0.3s;
 }
 
-.post-preview h2 a:hover {
+.post-preview:hover h2 {
     color: var(--color-earth);
 }
 
@@ -93,19 +101,9 @@ h1, h2 {
     font-style: italic;
 }
 
-.read-more {
-    display: inline-block;
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    background: var(--color-forest);
-    color: white;
-    text-decoration: none;
-    border-radius: 2px;
-    transition: background-color 0.3s;
-}
-
-.read-more:hover {
-    background: var(--color-moss);
+.post-excerpt {
+    margin: 1em 0 0;
+    color: #2a2a2a;
 }
 
 .post-categories {
