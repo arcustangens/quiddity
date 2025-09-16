@@ -14,8 +14,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: "categories"
-      type: "pages"
-    values:
-      layout: "category"

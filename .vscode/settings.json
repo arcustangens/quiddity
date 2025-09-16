@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "**/_includes/*.html": "liquid-html",
+        "**/_layouts/*.html": "liquid-html"
+    },
+    "emmet.includeLanguages": {
+        "liquid-html": "html"
+    }
+}
