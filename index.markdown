@@ -24,7 +24,7 @@ A journey through words, emotions, and rhythmic expressions.
   <h2>Categories</h2>
   {% assign categories = site.categories | sort %}
   {% for category in categories %}
-    <a href="/categories/{{ category | first | slugify }}/" class="category-link">
+    <a href="{{ site.baseurl }}/categories/{{ category | first | slugify }}/" class="category-link">
       {{ category | first }} ({{ category | last | size }})
     </a>
   {% endfor %}
