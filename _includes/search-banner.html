@@ -11,7 +11,7 @@
         top: 0;
         left: 0;
         right: 0;
-        background: var(--color-forest);
+        background: {{ site.palette.main }};
         height: 60px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
@@ -89,16 +89,16 @@
 
     .search-result-item a {
         text-decoration: none;
-        color: var(--color-forest);
+        color: {{ site.palette.main }};
     }
 
     .search-result-item a:hover {
-        color: var(--color-earth);
+        color: {{ site.palette.accent }};
     }
 
     .search-result-date {
         font-size: 0.9em;
-        color: var(--color-moss);
+        color: {{ site.palette.secondary }};
         font-style: italic;
     }
 

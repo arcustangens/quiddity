@@ -4,7 +4,7 @@ title: Quiddity
 ---
 
 <div class="post-list">
-{% for post in site.posts limit:5 %}
+{% for post in site.posts %}
   <article class="post-preview">
     <a href="{{ post.url | relative_url }}" class="post-link">
       <h2>{{ post.title }}</h2>
@@ -18,7 +18,13 @@ title: Quiddity
           {% endif %}
       </p>
       {% endif %}
-      <p class="post-excerpt">{{ post.excerpt }}</p>
+      <p class="post-excerpt">
+        {% assign lines = post.content | replace: '</p>', '<br />' | remove: '<p>' | split: '<br />' %}
+        {% assign first_two_lines = lines | slice: 0, 2 | join: '<br />' %}
+        {{ first_two_lines }}
+        <br />
+        .&nbsp;.&nbsp;.
+      </p>
     </a>
   </article>
 {% endfor %}
@@ -26,15 +32,12 @@ title: Quiddity
 
 <style>
 :root {
-    --color-forest: #2c4a3e;    /* Dark forest green for primary elements */
-    --color-earth: #5e4238;     /* Rich earth brown for secondary elements */
-    --color-moss: #4a5d4c;      /* Muted moss green for accents */
     --font-main: "EB Garamond", Georgia, serif;
     --font-headers: var(--font-main);
 }
 
 body {
-    background-color: #f4f1eb;
+    background-color: {{ site.palette.background }};
     color: #2a2a2a;
     font-family: var(--font-main);
     font-size: 18px;
@@ -42,7 +45,7 @@ body {
 }
 
 h1, h2 {
-    color: var(--color-forest);
+    color: {{ site.palette.main }};
 }
 
 .post-list {
@@ -74,7 +77,7 @@ h1, h2 {
     transform: translateX(-50%);
     width: 100px;
     height: 1px;
-    background: var(--color-moss);
+    background: {{ site.palette.secondary }};
     opacity: 0.4;
 }
 
@@ -86,17 +89,17 @@ h1, h2 {
 }
 
 .post-preview h2 {
-    color: var(--color-forest);
+    color: {{ site.palette.main }};
     margin-top: 0;
     transition: color 0.3s;
 }
 
 .post-preview:hover h2 {
-    color: var(--color-earth);
+    color: {{ site.palette.accent }};
 }
 
-.post-meta {
-    color: var(--color-moss);
+.post-meta, .ellipsis {
+    color: {{ site.palette.secondary }};
     font-size: 0.9em;
     font-style: italic;
 }
@@ -114,7 +117,7 @@ h1, h2 {
     display: inline-block;
     margin: 0.3em;
     padding: 0.5em 1em;
-    background: var(--color-moss);
+    background: {{ site.palette.secondary }};
     color: white;
     border-radius: 2px;
     text-decoration: none;
@@ -122,7 +125,7 @@ h1, h2 {
 }
 
 .category-link:hover {
-    background: var(--color-earth);
+    background: {{ site.palette.accent }};
 }
 
 .timeline-nav {
@@ -134,7 +137,7 @@ h1, h2 {
 }
 
 .timeline-nav h2 {
-    color: var(--color-forest);
+    color: {{ site.palette.main }};
     margin-top: 0;
 }
 
@@ -145,14 +148,14 @@ h1, h2 {
 .month-group summary {
     cursor: pointer;
     padding: 0.5em;
-    background: var(--color-forest);
+    background: {{ site.palette.main }};
     color: white;
     border-radius: 2px;
     transition: background-color 0.3s;
 }
 
 .month-group summary:hover {
-    background: var(--color-moss);
+    background: {{ site.palette.secondary }};
 }
 
 .month-group ul {
@@ -162,12 +165,12 @@ h1, h2 {
 }
 
 .month-group a {
-    color: var(--color-earth);
+    color: {{ site.palette.accent }};
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .month-group a:hover {
-    color: var(--color-forest);
+    color: {{ site.palette.main }};
 }
 </style>

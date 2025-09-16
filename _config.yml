@@ -7,6 +7,14 @@ plugins:
 
 collections:
 
+excerpt_length: 2
+
+palette:
+  main: "#2c4a3e"
+  secondary: "#4a5d4c"
+  background: "#f4f1ee"
+  accent: "#5e4238"
+
 defaults:
   - scope:
       path: "_posts"
