@@ -7,7 +7,7 @@ layout: default
     {% if page.date %}
     <p class="post-meta">
         {% assign date_format = page.date_format | default: "%Y" %} {% if page.date_format == "month_year" %} {{
-        page.date | date: "%B %Y" }} {% else %} {{ page.date | date: date_format }} {% endif %}
+        page.date | date: "%Y" }} {% else %} {{ page.date | date: date_format }} {% endif %}
     </p>
     {% endif %}
 
@@ -73,14 +73,14 @@ layout: default
     }
 
     .post-content {
-        margin: 2em 0;
-        padding: 0 8em;
+        margin: 2em auto;
+        inline-size: min-content;
+        white-space: nowrap;
     }
 
     .post-content p {
         text-align: left;
         margin: 1.5em auto;
-        max-width: 600px;
     }
 
     /* Style for italicized verses */
