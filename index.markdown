@@ -1,33 +1,26 @@
 ---
 layout: default
-title: Poetry Collection
+title: Quiddity
 ---
-
-# Poetry Collection
-
-A journey through words, emotions, and rhythmic expressions.
-
-## Poems
 
 <div class="post-list">
 {% for post in site.posts limit:5 %}
   <article class="post-preview">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+    {% if post.date %}
+    <p class="post-meta">
+        {% assign date_format = post.date_format | default: "%B %d, %Y" %}
+        {% if post.date_format == "month_year" %}
+            {{ post.date | date: "%B %Y" }}
+        {% else %}
+            {{ post.date | date: date_format }}
+        {% endif %}
+    </p>
+    {% endif %}
     <p>{{ post.excerpt }}</p>
     <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
   </article>
 {% endfor %}
-</div>
-
-<div class="post-categories">
-  <h2>Categories</h2>
-  {% assign categories = site.categories | sort %}
-  {% for category in categories %}
-    <a href="{{ site.baseurl }}/categories/{{ category | first | slugify }}/" class="category-link">
-      {{ category | first }} ({{ category | last | size }})
-    </a>
-  {% endfor %}
 </div>
 
 <style>
@@ -55,14 +48,33 @@ h1, h2 {
     margin: 2em 0;
 }
 
+.post-list {
+    position: relative;
+}
+
 .post-preview {
-    margin-bottom: 2em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid var(--color-moss);
+    margin-bottom: 3em;
+    padding: 2em;
     background: white;
-    padding: 1.5em;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+.post-preview:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: var(--color-moss);
+    opacity: 0.4;
 }
 
 .post-preview h2 a {

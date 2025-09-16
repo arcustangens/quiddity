@@ -7,14 +7,14 @@
     <style>
       @font-face {
         font-family: 'EB Garamond';
-        src: url('/assets/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype-variations');
+        src: url('{{ site.baseurl }}/assets/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype-variations');
         font-weight: 400 800;
         font-style: normal;
       }
 
       @font-face {
         font-family: 'EB Garamond';
-        src: url('/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype-variations');
+        src: url('{{ site.baseurl }}/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype-variations');
         font-weight: 400 800;
         font-style: italic;
       }
@@ -25,17 +25,17 @@
         --color-forest: #2c4a3e;
         --color-earth: #5e4238;
         --color-moss: #4a5d4c;
+        --font-main: 'EB Garamond', Georgia, serif;
       }
 
       body {
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-moss) 100%);
+        background: #f4f1eb;
         min-height: 100vh;
       }
 
       #main_content_wrap {
-        background: #f4f1eb;
         margin: 0;
         padding: 40px 0;
         min-height: calc(100vh - 80px);
@@ -45,31 +45,43 @@
         padding: 20px;
         max-width: 800px;
         margin: 0 auto;
-        font-family: 'EB Garamond', Georgia, serif;
+        font-family: var(--font-main);
         font-size: 18px;
         line-height: 1.6;
       }
 
-      @font-face {
-        font-family: 'EB Garamond';
-        src: url('/assets/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
-        font-weight: 400 800;
-        font-style: normal;
+      /* Common banner styles */
+      .search-banner,
+      .nav-banner {
+        font-family: var(--font-main);
+        font-size: 16px;
       }
 
-      @font-face {
-        font-family: 'EB Garamond';
-        src: url('/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
-        font-weight: 400 800;
-        font-style: italic;
+      .search-banner-content,
+      .nav-banner-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1em;
+      }
+
+      .search-container {
+        width: 300px !important;
+      }
+
+      #search-input,
+      .nav-trigger {
+        font-size: 16px;
+        font-family: var(--font-main);
       }
     </style>
   </head>
   <body>
+    {% include search-banner.html %}
     <div id="main_content_wrap">
       <div id="main_content">
         {{ content }}
       </div>
     </div>
+    {% include nav-banner.html %}
   </body>
 </html>

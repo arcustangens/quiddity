@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Ocean's Memory"
-date: 2025-09-12 11:15:00 -0500
-categories: [nature, environmental, reflection]
+categories: [nature, reflection, timeless]
 ---
 
 Waves remember ancient shores,  

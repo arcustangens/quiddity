@@ -1,0 +1,160 @@
+<!-- Top banner with site title -->
+<div class="search-banner">
+    <div class="search-banner-content">
+        <a href="{{ site.baseurl }}/" class="home-link">Quiddity</a>
+    </div>
+</div>
+
+<style>
+    .search-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--color-forest);
+        height: 60px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .search-banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2em;
+        height: 100%;
+    }
+
+    .home-link {
+        color: white;
+        text-decoration: none;
+        font-family: var(--font-main);
+        transition: color 0.3s;
+        font-size: 1.2em;
+        line-height: 1;
+        padding: 0.5em 0;
+    }
+
+    .home-link:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .search-container {
+        position: relative;
+        width: 300px;
+        height: 36px;
+    }
+
+    #search-input {
+        width: 100%;
+        height: 100%;
+        padding: 0 1em;
+        border: none;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.9);
+        font-family: var(--font-main);
+        font-size: 1em;
+        line-height: 36px;
+    }
+
+    #search-input:focus {
+        outline: none;
+        background: white;
+    }
+
+    .search-results {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 2px;
+        margin-bottom: 0.5em;
+        max-height: 300px;
+        overflow-y: auto;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-result-item {
+        padding: 0.8em 1em;
+        border-bottom: 1px solid #eee;
+    }
+
+    .search-result-item:last-child {
+        border-bottom: none;
+    }
+
+    .search-result-item a {
+        text-decoration: none;
+        color: var(--color-forest);
+    }
+
+    .search-result-item a:hover {
+        color: var(--color-earth);
+    }
+
+    .search-result-date {
+        font-size: 0.9em;
+        color: var(--color-moss);
+        font-style: italic;
+    }
+
+    #main_content_wrap {
+        margin-top: 76px; /* banner height (60px) + some spacing */
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const posts = [
+            {% for post in site.posts %}
+            {
+                title: {{ post.title | jsonify }},
+                content: {{ post.content | strip_html | jsonify }},
+                url: {{ post.url | relative_url | jsonify }},
+                date: {{ post.date | date: "%B %d, %Y" | jsonify }}
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            if (query.length < 2) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            const matches = posts.filter(post => {
+                return post.title.toLowerCase().includes(query) ||
+                       post.content.toLowerCase().includes(query);
+            }).slice(0, 5); // Limit to 5 results
+
+            if (matches.length > 0) {
+                searchResults.innerHTML = matches.map(post => `
+                    <div class="search-result-item">
+                        <a href="${post.url}">
+                            ${post.title}
+                            ${post.date ? `<div class="search-result-date">${post.date}</div>` : ''}
+                        </a>
+                    </div>
+                `).join('');
+                searchResults.style.display = 'block';
+            } else {
+                searchResults.innerHTML = '<div class="search-result-item">No results found</div>';
+                searchResults.style.display = 'block';
+            }
+        });
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchResults.contains(e.target) && e.target !== searchInput) {
+                searchResults.style.display = 'none';
+            }
+        });
+    });
+</script>
