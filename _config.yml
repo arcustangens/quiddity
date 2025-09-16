@@ -7,9 +7,6 @@ plugins:
   - jekyll-feed
 
 collections:
-  categories:
-    output: true
-    permalink: /categories/:path/
 
 defaults:
   - scope:
