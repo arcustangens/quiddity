@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Niedzielny obiad"
-date: 2025-09-16
+date: 2023-01-01
 ---
 
 Ciocia radośnie pyta, co na deser  

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elegia żywiczna"
-date: 2025-09-16
+date: 2025-01-01
 ---
 
 U stóp wysmukłej, iglastej samotni  

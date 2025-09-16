@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Herbivore"
-date: 2025-09-16
+date: 2021-01-01
 ---
 
 Crazy how you do it, right?  

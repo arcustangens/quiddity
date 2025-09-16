@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sny o miłości"
-date: 2025-09-16
+date: 2024-01-01
 ---
 
 Sny o miłości przedwczesnej, bezradnej  

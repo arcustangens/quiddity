@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Błękit"
-date: 2025-09-16
+date: 2023-01-01
 ---
 
 Psotliwy chichot, losu żart udany  

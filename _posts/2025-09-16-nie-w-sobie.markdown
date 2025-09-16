@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nie w sobie"
-date: 2025-09-16
+date: 2024-01-01
 ---
 
 buty zzułem bardzo cierpliwie  

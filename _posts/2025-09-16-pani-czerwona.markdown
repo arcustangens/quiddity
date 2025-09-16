@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pani czerwona"
-date: 2025-09-16
+date: 2024-01-01
 ---
 
 Pani czerwona spaceruje nocą  

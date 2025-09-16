@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gejsza"
-date: 2025-09-16
+date: 2025-01-04
 ---
 
 Wieczorem gardzę porankiem -  

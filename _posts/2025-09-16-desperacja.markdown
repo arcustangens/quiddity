@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Desperacja"
-date: 2025-09-16
+date: 2021-01-01
 ---
 
 Desperacja - jak narkotyk  

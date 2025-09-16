@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "To boldness"
-date: 2025-09-16
+date: 2025-01-06
 ---
 
 Oh, whisper me ye!  

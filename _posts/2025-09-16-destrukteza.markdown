@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Destrukteza"
-date: 2025-09-16
+date: 2023-01-01
 ---
 
 Znów to zrobiłem. Złamany na dwoje  

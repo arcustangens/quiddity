@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Psy starych ludzi"
-date: 2025-09-16
+date: 2024-01-01
 ---
 
 Gdybyśmy byli w parku, przy źródle strumienia  
