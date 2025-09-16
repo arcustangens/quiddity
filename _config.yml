@@ -1,7 +1,6 @@
 title: Quiddity
-description: A collection of poems exploring the essence of human experience through verse.
-baseurl: "/quiddity"    # the subpath for GitHub Pages
-url: "https://arcustangens.github.io"   # your GitHub Pages URL
+baseurl: "/quiddity"
+url: "https://arcustangens.github.io"
 
 plugins:
   - jekyll-feed

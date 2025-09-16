@@ -10,7 +10,7 @@ title: Quiddity
       <h2>{{ post.title }}</h2>
       {% if post.date %}
       <p class="post-meta">
-          {% assign date_format = post.date_format | default: "%B %d, %Y" %}
+          {% assign date_format = post.date_format | default: "%Y" %}
           {% if post.date_format == "month_year" %}
               {{ post.date | date: "%B %Y" }}
           {% else %}

@@ -7,15 +7,15 @@ date: 2025-09-16
 Wieczorem gardzę porankiem -  
 a chcę, by moja przyszłość była lepsza  
 słodsza,  
-    piękniejsza,  
-        pełniejsza  
+&emsp;piękniejsza,  
+&emsp;&emsp;pełniejsza  
 Pochylam się nad nią  
-    z dzbankiem herbaty  
-        jak gejsza  
+&emsp;z dzbankiem herbaty  
+&emsp;&emsp;jak gejsza  
 bezwolnie wracając  
-    do ciemnej komnaty  
-        cesarza-szaleńca z dynastii taniego tworzywa  
+&emsp;do ciemnej komnaty  
+&emsp;&emsp;cesarza-szaleńca z dynastii taniego tworzywa  
 starannie chowając  
-    sztylet rumieńca  
-        w połach mej szaty  
+&emsp;sztylet rumieńca  
+&emsp;&emsp;w połach mej szaty  
 Nie wyjdzie stąd żywy - i nie wyjdę stąd żywa.

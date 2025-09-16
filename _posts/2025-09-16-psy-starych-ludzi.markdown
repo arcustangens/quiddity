@@ -7,7 +7,7 @@ date: 2025-09-16
 Gdybyśmy byli w parku, przy źródle strumienia  
 tańczyłbym krzepkim wigorem tęsknoty  
 kurczowo trzymając się twojego ramienia  
-- w krzakach przy brodzie bywają wszak koty
+\- w krzakach przy brodzie bywają wszak koty
 
 Jesteśmy jednak w domu, cisza brzęczy w uszach  
 nieprzerywana świergotem radioli  
@@ -17,7 +17,7 @@ zwłaszcza, gdy każdy ruch zwykle mnie boli
 O tej porze zazwyczaj chodzimy zapalić  
 powinność słuszna, tak jak bezzasadna  
 Twoją pilność w tej kwestii można tylko chwalić  
-- zazwyczaj, bo dziś gdzieś leżysz bezwładna
+\- zazwyczaj, bo dziś gdzieś leżysz bezwładna
 
 Raczej nie powoduje to u mnie emocji  
 dobrze rozumiem potrzebę spoczynku  

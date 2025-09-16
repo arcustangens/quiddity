@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Zdumienie"
-date: 2025-09-16
+date: 2020-01-01
 ---
 
 Rześkie zdumienie, daj mi swej radości  
