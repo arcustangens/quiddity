@@ -84,4 +84,41 @@ layout: default
     .post-content em {
         color: {{ site.palette.accent }};
     }
+
+    /* Mobile responsive styles for posts */
+    @media (max-width: 768px) {
+        .post {
+            max-width: 100%;
+            padding: 0 0.8em 3em;
+        }
+
+        .post-content {
+            inline-size: auto;
+            white-space: normal;
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        .post h1 {
+            font-size: 1.8em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .post {
+            padding: 0 0.5em 3em;
+        }
+
+        .post-content {
+            margin: 1.5em auto;
+        }
+
+        .post h1 {
+            font-size: 1.6em;
+        }
+
+        .post-content p {
+            margin: 1.2em auto;
+        }
+    }
 </style>
