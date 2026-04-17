@@ -174,3 +174,26 @@ h1, h2 {
     color: {{ site.palette.main }};
 }
 </style>
+<script>
+(function() {
+    var SCROLL_KEY = 'quiddity_scroll';
+
+    // Restore scroll position if returning from a post
+    var savedScroll = sessionStorage.getItem(SCROLL_KEY);
+    if (savedScroll !== null) {
+        // Use requestAnimationFrame to ensure the page has rendered before scrolling
+        requestAnimationFrame(function() {
+            window.scrollTo(0, parseInt(savedScroll, 10));
+            sessionStorage.removeItem(SCROLL_KEY);
+        });
+    }
+
+    // Save scroll position when clicking a post link
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a.post-link');
+        if (link) {
+            sessionStorage.setItem(SCROLL_KEY, window.scrollY);
+        }
+    });
+})();
+</script>
