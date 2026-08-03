@@ -6,7 +6,8 @@ date: 2026-07-09
 
 Cienka, czerwona linia oddziela rzekomo wodę od powietrza.  
 Pojawia się w okolicach siedmiu, ośmiu tysięcy, nie pamiętam dokładnie.  
-Podobno wytycza trajektorię wiatru, który nacina kąciki oczu słone ze znużenia; jawi się starannym, przerywanym krojem w okolicy sutków i podbrzusza na skórze ludzi bojących się ciszy.
+Podobno wytycza trajektorię wiatru, który nacina kąciki oczu słone ze znużenia;  
+jawi się starannym, przerywanym krojem w okolicy sutków i podbrzusza na skórze ludzi bojących się ciszy.
 
 Czasami przesuwam się w stronę czerwieni; wzdycham wtedy głośno, udając, że wiem, co to wysiłek.  
 Nie ma w tym gracji, ani wstydu; może odrobina pustej akceptacji.  
