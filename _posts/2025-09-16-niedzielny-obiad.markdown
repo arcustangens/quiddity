@@ -7,7 +7,7 @@ date: 2023-01-01
 Ciocia radośnie pyta, co na deser  
 Wyciągam z szafki skórzany neseser  
 Suchy brzęk szklanek wybrzmiewa nachalnie  
-Wyjmuje skalpel, dosyć machinalnie
+Wyjmuję skalpel, dosyć machinalnie
 
 Przepraszam, słońce, podałbyś mi soli?  
 Ostrze obniża się bardzo powoli  
