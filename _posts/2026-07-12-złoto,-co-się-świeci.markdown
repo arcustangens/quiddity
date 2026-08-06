@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "złoto, co się świeci"
+title: "Złoto, co się świeci"
 date: 2026-07-12
 ---
 
