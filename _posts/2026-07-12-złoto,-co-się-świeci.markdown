@@ -5,7 +5,7 @@ date: 2026-07-12
 ---
 
 pod ciepłym słońcem mojego oddechu  
-usychasz chrupko, jak młode orzeczy  
+usychasz chrupko, jak młode orzechy  
 łamię Ci kości i tarmoszę skórę  
 tnę pocałunkiem na wióry
 
