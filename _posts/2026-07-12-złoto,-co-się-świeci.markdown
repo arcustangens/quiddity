@@ -6,10 +6,10 @@ date: 2026-07-12
 
 pod ciepłym słońcem mojego oddechu  
 usychasz chrupko, jak młode orzechy  
-łamię Ci kości i tarmoszę skórę  
+łamię ci kości i tarmoszę skórę  
 tnę pocałunkiem na wióry
 
-wieczorną bryzą Cię liżę powoli  
+wieczorną bryzą cię liżę powoli  
 targam twe ciało znad lądu nad wodę  
 nie skąpię ranom wypłakanej soli  
 doprawiam nią nasze gody

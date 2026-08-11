@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mezopotamia"
+title: "Mezopotamia"
 date: 2026-07-12
 ---
 
